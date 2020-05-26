@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fix {
+    clear: both;
+}
+
+/*-------------------nav------------------*/
+
+nav {
+    width: 100wv;
+    height: 50px;
+    background: #232323;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+nav li {
+    display: inline;
+    color: #fff;
+}
+
+nav a {
+    float: right;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.logo {
+    text-transform: uppercase;
+    float: left;
+}
+
+.logo1 {
+    color: #f33f3f;
+}
+
+/* ------------------header------------- */
+
+header {
+    background: url(../img/slide_01.jpg);
+    width: 100vw;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-transform: uppercase;
+}
+
+header::before {
+    content: "best offer";
+    color: #f33f3f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header::after {
+    content: "new arrivals on sale";
+    color: #fff;
+    font-size: 46px;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*-----------------container-------------------*/
+
+.container {
+    width: 60%;
+    height: 80vh;
+    margin: 0 auto 20px;
+    ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+
+}
+
+.box {
+    border: solid #F4F4F4 1px;
+    border-top: none;
+    display: grid;
+    font-size: 14px;
+    font-weight: 100;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        "vienas vienas"
+        "vienas vienas"
+        "vienas vienas"
+        "trys keturi"
+        "penki penki"
+}
+
+.box a {
+    text-decoration: none;
+    color: #1C6692;
+}
+
+
+.vienas {
+    grid-area: vienas;
+    background: url(../img/product_01.jpg);
+    background-size: cover;
+}
+
+.simtas {
+    background: url(../img/product_02.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: vienas;
+}
+
+.dusimtai {
+    background: url(../img/product_03.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: vienas;
+}
+
+.tryssimtai {
+    background: url(../img/product_04.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: vienas;
+}
+
+.keturisimtai {
+    background: url(../img/product_05.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: vienas;
+}
+
+.penkisimtai {
+    background: url(../img/product_06.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: vienas;
+}
+
+.du {
+    grid-area: du;
+    background: #38220F;
+    color: #fff;
+    font-size: 15px;
+    justify-self: center;
+    align-self: center;
+    margin-top: -18.5%;
+    padding: 4% 25%;
+}
+
+.trys {
+    grid-area: trys;
+    padding-left: 20px;
+    display: flex;
+    align-self: center;
+}
+
+.keturi {
+    grid-area: keturi;
+    display: flex;
+    justify-self: flex-end;
+    align-self: center;
+    padding: 0 20px;
+}
+
+.penki {
+    grid-area: penki;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.sesi {
+    grid-area: sesi;
+
+}
+
+.septyni {
+    color: #f33f3f;
+    display: flex;
+    justify-self: flex-start;
+    align-self: center;
+    padding-left: 20px;
+}
+
+.astuoni {
+    color: #f33f3f;
+    display: flex;
+    justify-self: flex-end;
+    align-self: center;
+    padding-right: 20px;
+    font-size: 12px;
+
+}
+
+/*----------------products-------------*/
+
+.products {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 150px;
+    grid-template-rows: repeat(3, 1fr);
+    border-bottom: solid #F4F4F4 1px;
+    margin: 10px auto;
+
+}
+
+.latest {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    align-self: center;
+}
+
+.allProducts {
+    font-size: 10px;
+    color: #f33f3f;
+    text-transform: uppercase;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+    font-weight: bold;
+}
+
+/*----------------------------------*/
+
+.about {
+    width: 60%;
+    margin: 40px auto 10px auto;
+    padding-bottom: 30px;
+    border-bottom: solid #F4F4F4 1px;
+}
+
+/*--------------------------------------*/
+
+.container1 {
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 40px;
+    position: relative;
+    border-bottom: solid #F4F4F4 1px;
+
+}
+
+.stulpelis1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.stulpelis1 h3 {
+    color: #1C6692;
+}
+
+.stulpelis1 ul {
+    padding-left: 20px;
+}
+
+.stulpelis1 p {
+    font-size: 14px;
+    margin: 40px auto;
+}
+
+.stulpelis1 li {
+    margin-top: 10px;
+    list-style-type: square;
+    font-size: 14px;
+}
+
+.stulpelis2 {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    background: blue;
+    background: url(../img/feature-image.jpg);
+    width: 100%;
+    height: 400px;
+}
+
+button {
+    padding: 10px 24px;
+    background: #F33F3F;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    color: #fff;
+}
+
+/*------------footer-----*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-transform: uppercase;
+}
