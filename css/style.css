@@ -16,39 +16,116 @@ body {
 
 /*-------------------nav------------------*/
 
+.menu2 {
+    width: 100wv;
+    height: 50px;
+    background: #232323;
+    position: relative;
+    color: #fff;
+    display: none;
+}
+
+.menu2 p {
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+}
+
+.logo2 {
+    color: #f33f3f;
+}
+
 nav {
     width: 100wv;
     height: 50px;
     background: #232323;
+    color: #fff;
     display: flex;
     align-items: center;
+    min-width: 325px;
+    position: relative;
 }
 
 nav ul {
     width: 60%;
     margin: 0 auto;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    padding: 14px 0;
+    font-size: 14px;
+    text-decoration: none;
+    float: right;
+    margin-left: 40px;
+    color: #fff;
+    position: relative;
 }
 
 
 nav li {
+    list-style-type: none;
     display: inline;
-    color: #fff;
-}
-
-nav a {
-    float: right;
-    color: #fff;
-    text-decoration: none;
-    margin-left: 40px;
 }
 
 .logo {
     text-transform: uppercase;
     float: left;
+    position: absolute;
+    transform: scale(1.5);
 }
+
 
 .logo1 {
     color: #f33f3f;
+}
+
+nav .logo a:hover {
+    color: #fff;
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #f33f3f;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.2s linear;
+}
+
+nav .logo a {
+    margin-left: 0px;
+}
+
+nav .logo a:before {
+    content: "";
+    display: inline;
+}
+
+nav a:hover::before {
+    width: 100%;
+
+}
+
+#toggle {
+    display: block;
+}
+
+label {
+    margin: 0 40px 0 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
 }
 
 /* ------------------header------------- */
@@ -61,6 +138,8 @@ header {
     background-position: center;
     position: relative;
     text-transform: uppercase;
+    cursor: pointer;
+    min-width: 325px;
 }
 
 header::before {
@@ -88,11 +167,10 @@ header::after {
     width: 60%;
     height: 80vh;
     margin: 0 auto 20px;
-    ;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 40px;
 
 }
 
@@ -109,8 +187,14 @@ header::after {
         "vienas vienas"
         "vienas vienas"
         "trys keturi"
-        "penki penki"
+        "penki penki";
+    cursor: pointer;
 }
+
+.box:hover {
+    box-shadow: 0px 1px 4px #c1c1c1;
+}
+
 
 .box a {
     text-decoration: none;
@@ -121,6 +205,7 @@ header::after {
 .vienas {
     grid-area: vienas;
     background: url(../img/product_01.jpg);
+    background-position: center;
     background-size: cover;
 }
 
@@ -157,6 +242,7 @@ header::after {
     background-size: cover;
     background-position: center;
     grid-area: vienas;
+
 }
 
 .du {
@@ -246,9 +332,14 @@ header::after {
     font-weight: bold;
 }
 
+.allProducts a {
+    color: #f33f3f;
+}
+
 /*----------------------------------*/
 
 .about {
+    display: block;
     width: 60%;
     margin: 40px auto 10px auto;
     padding-bottom: 30px;
@@ -257,63 +348,6 @@ header::after {
 
 /*--------------------------------------*/
 
-.container1 {
-    width: 60%;
-    height: 500px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
-    padding: 40px;
-    position: relative;
-    border-bottom: solid #F4F4F4 1px;
-
-}
-
-.stulpelis1 {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-}
-
-.stulpelis1 h3 {
-    color: #1C6692;
-}
-
-.stulpelis1 ul {
-    padding-left: 20px;
-}
-
-.stulpelis1 p {
-    font-size: 14px;
-    margin: 40px auto;
-}
-
-.stulpelis1 li {
-    margin-top: 10px;
-    list-style-type: square;
-    font-size: 14px;
-}
-
-.stulpelis2 {
-    grid-column: 3 / 5;
-    grid-row: 1 / 3;
-    background: blue;
-    background: url(../img/feature-image.jpg);
-    width: 100%;
-    height: 400px;
-}
-
-button {
-    padding: 10px 24px;
-    background: #F33F3F;
-    border: none;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 60px;
-    left: 40px;
-    color: #fff;
-}
 
 /*------------footer-----*/
 
@@ -323,4 +357,70 @@ footer {
     align-items: center;
     height: 100px;
     text-transform: uppercase;
+}
+
+/*---------media----------*/
+
+@media (max-width: 500px) {
+    body {
+        min-width: 420px;
+    }
+
+    header {
+        height: 200px;
+        min-width: 420px;
+    }
+
+
+    header::after {
+        content: "new arrivals on sale";
+        font-size: 14px;
+    }
+
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .container .box {
+        min-width: 250px;
+    }
+
+
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .container1 {
+        margin-top: 500px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    nav {
+        height: auto;
+    }
+
+    nav a {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    #toggle:checked + nav a {
+        display: block;
+    }
+
+    .menu2 {
+        display: block;
+    }
+    
+
+
 }
